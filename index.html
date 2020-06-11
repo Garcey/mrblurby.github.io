@@ -32,36 +32,53 @@ X: <input type="number" id="xForm">
 <p></p>
 Y: <input type="number" id="yForm">
 <p></p>
-<button type="submit" onclick="formAddition()">Addition</button>
-<button type="submit" onclick="formSubtraction()">Subtraction</button>
-<button type="submit" onclick="formMultiplication()">Multiplication</button>
-<button type="submit" onclick="formDivision()">Division</button>
+<button type="button" onclick="formAddition()">Addition</button>
+<button type="button" onclick="formSubtraction()">Subtraction</button>
+<button type="button" onclick="formMultiplication()">Multiplication</button>
+<button type="button" onclick="formDivision()">Division</button>
+<button type="button" onclick="formRemainder()">Remainder</button>
 </form>
+
+<p id="answer">Your answer</p>
 
 <script>
 
 function formAddition() {
   var xValue = document.getElementById('xForm').value
   var yValue = document.getElementById('yForm').value
-  alert(+xValue + +yValue)
+  var mathAnswer = (+xValue + +yValue)
+  document.getElementById("answer").innerHTML = mathAnswer;
 }
 
 function formSubtraction() {
   var xValue = document.getElementById('xForm').value
   var yValue = document.getElementById('yForm').value
-  alert(+xValue - +yValue)
+  var mathAnswer = (+xValue - +yValue)
+  document.getElementById("answer").innerHTML = mathAnswer;
 }
 
 function formMultiplication() {
   var xValue = document.getElementById('xForm').value
   var yValue = document.getElementById('yForm').value
-  alert(+xValue * +yValue)
+  var mathAnswer = (+xValue * +yValue)
+  document.getElementById("answer").innerHTML = mathAnswer;
 }
 
 function formDivision() {
   var xValue = document.getElementById('xForm').value
   var yValue = document.getElementById('yForm').value
-  alert(+xValue / +yValue)
+  var mathAnswer = (+xValue / +yValue)
+  document.getElementById("answer").innerHTML = mathAnswer;
+}
+
+function formRemainder() {
+  var xValue = document.getElementById('xForm').value
+  var yValue = document.getElementById('yForm').value
+  var mathAnswer = Math.floor(+xValue / +yValue)
+  var remainder = "remainder"
+  var remainderAnswer = +xValue - (Math.floor(+xValue / +yValue) * +yValue)
+  var theAnswer = +mathAnswer + ' remainder ' + +remainderAnswer;
+  document.getElementById("answer").innerHTML = theAnswer;
 }
 
 </script>
