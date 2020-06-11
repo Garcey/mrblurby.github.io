@@ -1,13 +1,23 @@
 <!doctype HTML>
-<html>
-<audio controls>
-<source src="thisDude.mp3" type="audio/mpeg";>
+<body><audio id="sound" controls="">
+<source src="thisDude.mp3" type="audio/mpeg">
 </audio>
+
+    <audio id="bob">
+        <source src="howrya.mp3" type="audio/mpeg">
+    </audio>
 
 <p>
 hello there
 </p>
-<button>
-<img src = "200.gif">
+<button onclick="playAudio()" type="button">
+<img src="200.gif">
 </button>
-</html>
+
+<script>
+var x = document.getElementById("bob");
+
+function playAudio() {
+  x.play();
+}
+</script>
