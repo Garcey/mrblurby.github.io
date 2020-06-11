@@ -1,4 +1,5 @@
 <!doctype HTML>
+<!-- audio controller that plays bruh look at this dude -->
 <body><audio id="sound" controls="">
 <source src="thisDude.mp3" type="audio/mpeg">
 </audio>
@@ -7,12 +8,14 @@
         <source src="howrya.mp3" type="audio/mpeg">
     </audio>
 
+<!-- text -->
 <p>
 hello there
 </p>
+<!-- gif with button that says "hello there" -->
 <button onclick="playAudio()" type="button">
 <img src="200.gif">
-</button>
+</button><p></p>
 
 <script>
 var x = document.getElementById("bob");
@@ -21,3 +24,21 @@ function playAudio() {
   x.play();
 }
 </script>
+
+<!-- form that adds an x value and y value together -->
+<script>
+var myXValue = document.getElementById("xValue").value;
+  var myYValue = document.getElementById("yValue").value;
+  var addedTogether = +myXValue + +myYValue;
+
+alert('X is - ' + myXValue + ' and Y is - ' + myYValue + ' added together - ' + addedTogether);
+
+}
+
+</script>
+
+<form id="Values" onsubmit="formSubmissionFunction();">
+X: <input type="number" name="xValue" id="xValue"><br>
+Y: <input type="number" name="yValue" id="yValue"><br>
+<input type="submit" value="submit">
+</form>
