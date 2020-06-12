@@ -1,0 +1,134 @@
+<script>
+
+a = 2
+b = 2
+c = 2
+d = 2
+e = 2
+
+function dice() {
+  dice1();
+  dice2();
+  dice3();
+  dice4();
+  dice5();
+}
+
+function dice1() {
+  if (a == 2) {
+    document.getElementById("dice1").innerHTML =
+    Math.floor(Math.random() * 6) + 1;
+  }
+}
+
+function dice2() {
+    if (b == 2) {
+      document.getElementById("dice2").innerHTML =
+      Math.floor(Math.random() * 6) + 1;
+    }
+}
+
+function dice3() {
+  if (c == 2) {
+    document.getElementById("dice3").innerHTML =
+    Math.floor(Math.random() * 6) + 1;
+  }
+}
+
+function dice4() {
+  if (d == 2) {
+    document.getElementById("dice4").innerHTML =
+    Math.floor(Math.random() * 6) + 1;
+  }
+}
+
+function dice5() {
+  if (e == 2) {
+    document.getElementById("dice5").innerHTML =
+    Math.floor(Math.random() * 6) + 1;
+  }
+}
+
+function checker1() {
+  document.getElementById("check1").innerHTML = "1+";
+  a = 1
+}
+
+function checker2() {
+  document.getElementById("check2").innerHTML = "2+";
+  b = 1
+}
+
+function checker3() {
+  document.getElementById("check3").innerHTML = "3+";
+  c = 1
+}
+
+function checker4() {
+  document.getElementById("check4").innerHTML = "4+";
+  d = 1
+}
+
+function checker5() {
+  document.getElementById("check5").innerHTML = "5+";
+  e = 1
+}
+
+function uncheck1() {
+  document.getElementById("check1").innerHTML = "1-";
+  a = 2
+}
+
+function uncheck2() {
+  document.getElementById("check2").innerHTML = "2-";
+  b = 2
+}
+
+function uncheck3() {
+  document.getElementById("check3").innerHTML = "3-";
+  c = 2
+}
+
+function uncheck4() {
+  document.getElementById("check4").innerHTML = "4-";
+  d = 2
+}
+
+function uncheck5() {
+  document.getElementById("check5").innerHTML = "5-";
+  e = 2
+}
+
+</script>
+
+<style>
+.button {
+  padding: 32px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+</style>
+
+<button type="button" id="dice1" class="button" onclick="checker1()">Dice1</button>
+<button type="button" id="dice2" class="button" onclick="checker2()">Dice2</button>
+<button type="button" id="dice3" class="button" onclick="checker3()">Dice3</button>
+<button type="button" id="dice4" class="button" onclick="checker4()">Dice4</button>
+<button type="button" id="dice5" class="button" onclick="checker5()">Dice5</button>
+<button type="button" class="button" onclick="dice();">ROLL!</button><br></br>
+
+<button type="button" class="button" onclick="uncheck1()">drop 1</button>
+<button type="button" class="button" onclick="uncheck2()">drop 2</button>
+<button type="button" class="button" onclick="uncheck3()">drop 3</button>
+<button type="button" class="button" onclick="uncheck4()">drop 4</button>
+<button type="button" class="button" onclick="uncheck5()">drop 5</button>
+
+<p id="check1" style="font-size:50px">1-</p>
+<p id="check2" style="font-size:50px">2-</p>
+<p id="check3" style="font-size:50px">3-</p>
+<p id="check4" style="font-size:50px">4-</p>
+<p id="check5" style="font-size:50px">5-</p>
+<p></p>
