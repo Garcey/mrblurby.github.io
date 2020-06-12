@@ -32,11 +32,12 @@ X: <input type="number" id="xForm">
 <p></p>
 Y: <input type="number" id="yForm">
 <p></p>
-<button type="button" onclick="formAddition()">Addition</button>
-<button type="button" onclick="formSubtraction()">Subtraction</button>
-<button type="button" onclick="formMultiplication()">Multiplication</button>
-<button type="button" onclick="formDivision()">Division</button>
+<button type="button" onclick="formAddition()">X + Y</button>
+<button type="button" onclick="formSubtraction()">X - Y</button>
+<button type="button" onclick="formMultiplication()">X * Y</button>
+<button type="button" onclick="formDivision()">X / Y</button>
 <button type="button" onclick="formRemainder()">Remainder</button>
+<button type="button" onclick="formExponent()">X ^ Y</button>
 </form>
 
 <p id="answer">Your answer</p>
@@ -79,6 +80,13 @@ function formRemainder() {
   var remainderAnswer = +xValue - (Math.floor(+xValue / +yValue) * +yValue)
   var theAnswer = +mathAnswer + ' remainder ' + +remainderAnswer;
   document.getElementById("answer").innerHTML = theAnswer;
+}
+
+function formExponent() {
+  var xValue = document.getElementById('xForm').value
+  var yValue = document.getElementById('yForm').value
+  var mathAnswer = Math.pow(+xValue, +yValue)
+  document.getElementById("answer").innerHTML = mathAnswer;
 }
 
 </script>
